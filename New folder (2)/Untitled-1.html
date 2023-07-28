@@ -3,7 +3,6 @@
 <head>
   <title>Text Input and Display</title>
   <style>
-    /* Add some basic styling for the input and display area */
     #text-input {
       margin-bottom: 10px;gi
     }
@@ -17,26 +16,25 @@
   <div id="text-display"></div>
 
   <script>
-    // Function to handle the submit button click event
+    
     function handleSubmit() {
       const inputElement = document.getElementById("text-input");
       const text = inputElement.value.trim();
 
       if (text !== "") {
-        // Create a new paragraph element to display the text
+        
         const displayArea = document.getElementById("text-display");
         const newParagraph = document.createElement("p");
         newParagraph.textContent = text;
 
-        // Add the new paragraph to the display area
+        
         displayArea.appendChild(newParagraph);
 
-        // Clear the input
+   
         inputElement.value = "";
       }
     }
 
-    // Add an event listener to the submit button
     document.getElementById("submit-btn").addEventListener("click", handleSubmit);
   </script>
 </body>
